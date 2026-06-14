@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User V2",
+  "type": "object",
+  "required": ["id", "fullName", "username", "emailAddress"],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique user identifier"
+    },
+    "fullName": {
+      "type": "string",
+      "description": "Full name of the user"
+    },
+    "username": {
+      "type": "string",
+      "description": "Username"
+    },
+    "emailAddress": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "website": {
+      "type": "string",
+      "description": "Website URL"
+    },
+    "role": {
+      "type": "string",
+      "enum": ["admin", "user", "guest"],
+      "description": "User role — new in v2"
+    }
+  }
+}

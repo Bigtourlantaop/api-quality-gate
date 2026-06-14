@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-06-13T03:28:41.339Z",
+  "gateResult": {
+    "canDeploy": false,
+    "reason": "❌ Deployment blocked — Fix breaking changes first",
+    "checks": [
+      {
+        "name": "Breaking Change Check",
+        "passed": false,
+        "message": "❌ Found 4 breaking changes"
+      },
+      {
+        "name": "Schema Validation Check",
+        "passed": false,
+        "message": "❌ 1 responses failed schema validation"
+      },
+      {
+        "name": "Contract Compatibility Check",
+        "passed": false,
+        "message": "❌ API breaks backward compatibility"
+      }
+    ],
+    "timestamp": "2026-06-13T03:28:41.338Z"
+  },
+  "evolutionReport": {
+    "fromVersion": "v1",
+    "toVersion": "v2",
+    "timestamp": "2026-06-13T03:28:41.338Z",
+    "totalChanges": 5,
+    "breakingChanges": 4,
+    "nonBreakingChanges": 1,
+    "changes": [
+      {
+        "field": "name",
+        "changeType": "removed",
+        "isBreaking": true,
+        "oldValue": "string",
+        "reason": "Field \"name\" was removed — existing clients will break"
+      },
+      {
+        "field": "email",
+        "changeType": "removed",
+        "isBreaking": true,
+        "oldValue": "string",
+        "reason": "Field \"email\" was removed — existing clients will break"
+      },
+      {
+        "field": "fullName",
+        "changeType": "added",
+        "isBreaking": true,
+        "newValue": "string",
+        "reason": "Field \"fullName\" was added as required — existing clients will break"
+      },
+      {
+        "field": "emailAddress",
+        "changeType": "added",
+        "isBreaking": true,
+        "newValue": "string",
+        "reason": "Field \"emailAddress\" was added as required — existing clients will break"
+      },
+      {
+        "field": "role",
+        "changeType": "added",
+        "isBreaking": false,
+        "newValue": "string",
+        "reason": "Field \"role\" was added as optional — non-breaking"
+      }
+    ],
+    "canDeploy": false
+  }
+}
